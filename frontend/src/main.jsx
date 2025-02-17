@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Home from './pages/Home'
 import {store} from './store/store.js'
+import Logout from './pages/Logout.jsx'
 import ExpenseList from './pages/Expenses.jsx'
 import { Provider } from 'react-redux'
 
@@ -38,6 +39,12 @@ const router=createBrowserRouter([
           <ExpenseList/>
         ),
       },
+      {
+        path:"/logout",
+        element:(
+            <Logout/>
+        ),
+      }
      
     ]
 

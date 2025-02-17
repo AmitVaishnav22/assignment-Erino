@@ -2,7 +2,7 @@ import { useEffect ,useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchExpenses, deleteExpense } from "../store/expenseSlice.js";
 import ExpenseForm from "./ExpenseForm.jsx";
-
+import Logout from "./Logout.jsx";
 const ExpenseList = () => {
     const dispatch = useDispatch();
     const expenses  = useSelector(state => state.expenses.expenses);
@@ -44,6 +44,7 @@ const ExpenseList = () => {
                     </div>
                 </div>
             )}
+             <Logout/>
         </div>
     );
 };
